@@ -100,8 +100,12 @@ function retornaUltimoElemento(array) {
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-
+const novoArray = array.unshift(array[-1])
+const novoArray2 = novoArray.push (array[0])
+const novoArray3 = novoArray2.splice (1, 1)
+const novoArray4 = novoArray3.splice (-2, 1)
+console.log (novoArray4)
+return novoArray4
 }
 
 // EXERCÍCIO 12
