@@ -1,0 +1,2 @@
+# APRENDIZADOS DA SEMANA <h1>
+<p>Esssa semana foi intensa, aprendi a fazer o uso do terminal gitbash, bem como utilizar e sincronizar o repositorio github, hoje tive palestra sobre empregabilidade que achei bastante lucida e informativa, estou grata por estar no **BOOTCAMP DA LABENU**. </p>
