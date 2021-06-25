@@ -21,8 +21,7 @@ const cartaJogador1 = comprarCarta(naipe, numero)
 
 
 alert(cartaJogador1)
-
-
+///////////
 
 
 
