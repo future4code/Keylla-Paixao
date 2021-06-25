@@ -15,13 +15,43 @@ switch (respostaJogador){
 
 }
 
-alert ("Vamos Sortear suas cartas")
+let jogador1 = confirm("Vamos Sortear suas cartas")
 
-const cartaJogador1 = comprarCarta(naipe, numero)
+if (jogador1) {
+  let carta1Usuario = comprarCarta()
+  let carta2Usuario = comprarCarta()
+  let carta1Pc = comprarCarta()
+  let carta2Pc = comprarCarta()
+
+  let pontuacaoUsuario = carta1Usuario.valor + carta2Usuario.valor
+  
+  let pontuacaoPc = carta1Pc.valor + carta2Pc.valor
+
+  alert(`Olá, essa é sua pontuação ${pontuacaoUsuario}`)
+
+  alert(`Olá, essa é a pontuação do seu oponente ${pontuacaoPc}`)
+
+  console.log(`Usuário - cartas: ${carta1Usuario.texto} ${carta2Usuario.texto} - ${pontuacaoUsuario}`)
+
+  console.log(`Computador - cartas: ${carta1Pc.texto} ${carta2Pc.texto} - ${pontuacaoPc}`)
+
+    if (pontuacaoUsuario > pontuacaoPc) {
+     alert(console.log("O usuário ganhou!"))
+  } else if (pontuacaoPc > pontuacaoUsuario) {
+      alert(console.log("O computador ganhou!"))
+  } else if (pontuacaoUsuario === pontuacaoPc) {
+      alert(console.log("Empate!"))
+  }
+
+} else {
+  alert(console.log("O jogo acabou"))
+} 
+
+// a ultima parte eu fiz com a mlogica da correção e não entendi muito bem por que não compara diretamente
+// tentei fazer com que o jogo saia tudo com resuktado na tela e não consegui
+//em resumo nãp entendi nada rsrsrsrsrs
 
 
-alert(cartaJogador1)
-///////////
 
 
 
@@ -30,40 +60,3 @@ alert(cartaJogador1)
 
 
 
-
-
-
-
-
-/*function comprarCarta() {
-   // Cria array de cartas
-   const cartas = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
- 
-   // Cria array de naipes
-   const naipes = ["♦️", "♥️", "♣️", "♠️"]
- 
-   // Sorteia uma carta
-   const numero = cartas[Math.floor(Math.random() * 13)]
- 
-   // Sorteia um naipe
-   const naipe = naipes[Math.floor(Math.random() * 4)]
- 
-   let valor
-
-   // Verifica se é uma das letras e coloca o valor correspondente na variável valor
-   if (numero === "A") {
-     valor = 11
-   } else if (numero === "J" || numero === "Q" || numero === "K") {
-     valor = 10
-   } else { // Se nao for uma das letras, só converte a string para número
-     valor = Number(numero)
-   }
- 
-   // Cria um objeto da carta com as propriedades que vamos precisar: texto e valor
-   const carta = {
-     texto: numero + naipe,
-     valor: valor
-   }
- 
-   return carta
- }*/
