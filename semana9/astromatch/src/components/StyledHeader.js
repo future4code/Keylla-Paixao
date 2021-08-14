@@ -1,12 +1,14 @@
-import React from 'react'
+import styled from "styled-components";
 
-const StyledHader = () => {
-    return(
+const Container = styled.div`
+display: inline-flex;
+align-items: center;
 
-        
+.header{
+align-items: center;
+justify-content: center;
 
 
-    )
 }
-
-export default StyledHader;
+`
+export default Container;
