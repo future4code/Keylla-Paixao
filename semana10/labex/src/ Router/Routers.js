@@ -9,6 +9,7 @@ const Routers = () => {
         <BrowserRouter>
 
 <Switch>
+    
   <Route exact path={'/area-de-administracao'}>
     <AdministrationArea/>
     </Route>
